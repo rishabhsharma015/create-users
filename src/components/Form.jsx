@@ -55,7 +55,7 @@ const Form = () => {
             {
                 users.length>0 ? users.map((user, idx)=>(
                 <div key={idx} className={`user w-60 h-44 ${user.status === "Online" ? 'bg-green-600': (user.status === 'Offline' ? 'bg-red-600' : 'bg-yellow-500 text-black')} rounded-md p-3 flex flex-col gap-1 items-center`}>
-                                                <h1 className='font-semibold tracking-tighter text-lg w-full text-right'>{user.username}</h1>
+                                                <h1 className='font-semibold tracking-tighter text-lg'>{user.username}</h1>
                                                 <p className='font-thin tracking-wide mb-4'>{user.designation}</p>
                                                 <select onChange={(e)=>updateStatus(e,idx)} name="status" id="status" className='p-1 px-2 text-white outline-none text-sm rounded-md bg-transparent border border-white'>
                                                     <option className='text-black' value="Online">Online</option>
