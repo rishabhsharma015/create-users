@@ -9,12 +9,12 @@ const Form = () => {
 
 
     const submit = (data) => {
-        // setUsers((prev)=>{
-        //     return [...prev, data]
-        // })
-        let users = JSON.parse(localStorage.getItem("users"));
-        users.push(data);
-        localStorage.setItem("users", JSON.stringify([...users]));   
+        setUsers((prev)=>{
+            return [...prev, data]
+        })
+        // let users = JSON.parse(localStorage.getItem("users"));
+        // users.push(data);
+        // localStorage.setItem("users", JSON.stringify([...users]));   
     }
     
     const updateStatus = (e, userIdx) => {
